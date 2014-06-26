@@ -1,7 +1,7 @@
 #
 # Things that start with EEEEEEEE
 #
-'.source.php'
+'.source.php':
 
   'Element Type':
     'prefix': 'elementtype'

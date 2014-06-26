@@ -1,7 +1,7 @@
 #
 # Things that start with SSSSSSSS
 #
-'.source.php'
+'.source.php':
 
   'Service':
     'prefix': 'service'

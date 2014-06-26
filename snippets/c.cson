@@ -1,7 +1,7 @@
 #
 # Things that start with CCCCCCCC
 #
-'.source.php'
+'.source.php':
 
   'Controller':
     'prefix': 'controller'

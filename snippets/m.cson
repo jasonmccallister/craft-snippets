@@ -1,7 +1,7 @@
 #
 # Things that start with MMMMMMMM
 #
-'.source.php'
+'.source.php':
 
   'Model':
     'prefix': 'model'
