@@ -1,0 +1,22 @@
+#
+# Things that start with MMMMMMMM
+#
+'.source.php'
+
+  'Model':
+    'prefix': 'model'
+    'body': """
+    namespace Craft;
+
+    class $1Model extends BaseModel
+    {
+
+        protected function defineAttributes()
+        {
+            return array(
+                '$2' => array(AttributeType::$3)
+            );
+        }
+
+    }
+    """

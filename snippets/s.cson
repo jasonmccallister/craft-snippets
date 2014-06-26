@@ -1,0 +1,20 @@
+#
+# Things that start with SSSSSSSS
+#
+'.source.php'
+
+  'Service':
+    'prefix': 'service'
+    'body': """
+    namespace Craft;
+
+    class $1Service extends BaseApplicationComponent
+    {
+        protected $2;
+
+        public function getAll$3()
+        {
+            $4
+        }
+    }
+    """

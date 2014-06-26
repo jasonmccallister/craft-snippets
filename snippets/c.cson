@@ -1,19 +1,19 @@
 #
 # Things that start with CCCCCCCC
 #
-'.source.php':
+'.source.php'
 
-  'controller':
+  'Controller':
     'prefix': 'controller'
     'body': """
     namespace Craft;
 
     class $1Controller extends BaseController
     {
-        public function actionExampleFormSubmit()
+        public function action$2()
         {
-            $2;
-            $this->redirect('$3');
+            $3;
+            $this->redirect('$4');
         }
     }
     """

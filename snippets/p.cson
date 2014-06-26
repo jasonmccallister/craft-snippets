@@ -1,7 +1,7 @@
 #
-#  Things that start with PPPPPPPP
+# Things that start with PPPPPPPP
 #
-'.source.php':
+'.source.php'
 
   'Plugin':
     'prefix': 'plugin'

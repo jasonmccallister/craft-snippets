@@ -1,0 +1,13 @@
+#
+# Things that start with AAAAAAAA
+#
+'.source.php':
+
+  'Action':
+    'prefix': 'action'
+    'body': """
+    public function action$1()
+    {
+        $2;
+    }
+    """

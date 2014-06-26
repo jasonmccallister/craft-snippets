@@ -3,6 +3,28 @@
 #
 '.source.php':
 
+  'Record':
+    'prefix': 'record'
+    'body': """
+    namespace Craft;
+
+    class $1Record extends BaseRecord
+    {
+        public function getTableName()
+        {
+            return '$2';
+        }
+
+        public function defineAttributes()
+        {
+            return array(
+                '$3' => array(AttributeType::$4),
+                )
+            );
+        }
+    }
+    """
+
   'Redirect':
     'prefix': 'redirect'
     'body': "$this->redirect('$1');"
