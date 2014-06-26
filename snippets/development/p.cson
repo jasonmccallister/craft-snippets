@@ -1,0 +1,17 @@
+#
+#  Things that start with PPPPPPPP
+#
+'.source.php':
+
+  'Plugin':
+    'prefix': 'plugin'
+    'body': """
+    namespace Craft;
+
+    class $1Plugin extends BasePlugin
+    {
+
+        $1
+
+    }
+    """

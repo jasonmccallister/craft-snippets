@@ -1,0 +1,40 @@
+#
+# Things that start with GGGGGGGG
+#
+'.source.php':
+
+  'Get Developer':
+    'prefix': 'getdeveloper'
+    'body': """
+    public function getDeveloper()
+    {
+        return '$1';
+    }
+    """
+
+  'Get Developer URL':
+    'prefix': 'developerurl'
+    'body': """
+    public function getDeveloperUrl()
+    {
+        return 'http://$1';
+    }
+    """
+
+  'Get Name':
+    'prefix': 'getname'
+    'body': """
+    public function getName()
+    {
+        return Craft::t('$1');
+    }
+    """
+
+  'Get Version':
+    'prefix': 'getversion'
+    'body': """
+    public function getVersion()
+    {
+        return '$1';
+    }
+    """

@@ -1,0 +1,16 @@
+#
+# Things that start with RRRRRRRRRRRR
+#
+'.source.php':
+
+  'Redirect':
+    'prefix': 'redirect'
+    'body': "$this->redirect('$1');"
+
+  'Require Ajax':
+    'prefix': 'requireajax'
+    'body': "$this->requireAjax('$1');"
+
+  'Require Post':
+    'prefix': 'requirepost'
+    'body': "$this->requirePost('$1');"
