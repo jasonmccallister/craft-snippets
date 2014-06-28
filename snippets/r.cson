@@ -31,8 +31,8 @@
 
   'Require Ajax':
     'prefix': 'requireajax'
-    'body': "$this->requireAjax('$1');"
+    'body': "$this->requireAjaxRequest('$1');"
 
   'Require Post':
     'prefix': 'requirepost'
-    'body': "$this->requirePost('$1');"
+    'body': "$this->requirePostRequest('$1');"
