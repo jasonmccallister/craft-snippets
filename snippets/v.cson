@@ -1,0 +1,20 @@
+#
+# Things that start with VVVVVVVV
+#
+'.source.php':
+
+  'Variable':
+    'prefix': 'variable'
+    'body': """
+    namespace Craft;
+
+    class $1Variable
+    {
+        public function find$2($criteria)
+        {
+            $criteria = new $3($criteria);
+            return craft()->$4->find$5($criteria);
+        }
+
+    }
+    """
