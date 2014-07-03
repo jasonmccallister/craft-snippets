@@ -29,6 +29,10 @@
     'prefix': 'redirect'
     'body': "$this->redirect('$1');"
 
+  'Render Template':
+    'prefix': 'rendertemplate'
+    'body': "$this->renderTemplate('$1');"
+
   'Require Ajax':
     'prefix': 'requireajax'
     'body': "$this->requireAjaxRequest('$1');"
