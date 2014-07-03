@@ -1,0 +1,12 @@
+#
+# Things that start with IIIIIIII
+#
+'.source.php':
+
+  'Include CSS':
+    'prefix': 'includecss'
+	'body': "craft()->templates->includeCssResource('$1.css');"
+
+  'Include JS'
+    'prefix': 'includejs'
+	'body': "craft()->templates->includeJsResource('$1.js');"

@@ -29,6 +29,10 @@
     'prefix': 'redirect'
     'body': "$this->redirect('$1');"
 
+  'Redirect to Posted URL':
+    'prefix': 'redirecttopostedurl'
+    'body': "$this->redirectToPostedUrl();"
+
   'Render Template':
     'prefix': 'rendertemplate'
     'body': "$this->renderTemplate('$1');"

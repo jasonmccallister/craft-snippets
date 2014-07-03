@@ -3,6 +3,14 @@
 #
 '.source.php':
 
+  'Get CP Url':
+    'prefix': 'getcpurl'
+    'body': "return UrlHelper::getCpUrl('$1/'.$2->handle.'/'.$this->id);"
+
+  'Get Criteria':
+    'prefix': 'getcriteria'
+    'body': "return craft()->elements->getCriteria('$1');"
+
   'Get Developer':
     'prefix': 'getdeveloper'
     'body': """
@@ -21,6 +29,10 @@
     }
     """
 
+  'Get Post':
+    'prefix': 'getpost'
+    'body': "craft()->request->getPost('$1');"
+
   'Get Name':
     'prefix': 'getname'
     'body': """
@@ -29,6 +41,10 @@
         return Craft::t('$1');
     }
     """
+
+  'Get Required Post':
+    'prefix': 'getrequiredpost'
+    'body': "$1 = craft()->request->getRequiredPost('$2');"
 
   'Get Version':
     'prefix': 'getversion'
