@@ -7,6 +7,6 @@
     'prefix': 'includecss'
 	'body': "craft()->templates->includeCssResource('$1.css');"
 
-  'Include JS'
+  'Include JS':
     'prefix': 'includejs'
 	'body': "craft()->templates->includeJsResource('$1.js');"
