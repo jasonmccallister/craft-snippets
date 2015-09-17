@@ -5,8 +5,8 @@
 
 # A
 
-  'Action':
-    'prefix': 'caction'
+  'Craft Controller Action':
+    'prefix': 'action'
     'body': """
     public function action$1()
     {
@@ -16,7 +16,7 @@
 
 # C
 
-  'Controller':
+  'Craft Controller Class':
     'prefix': 'controller'
     'body': """
     namespace Craft;
@@ -33,7 +33,7 @@
 
 # E
 
-  'Element Type':
+  'Craft ElementType Class':
     'prefix': 'elementtype'
     'body': """
     namespace Craft;
@@ -104,15 +104,15 @@
 
 # G
 
-  'Get CP Url':
+  'Craft Get CP Url':
     'prefix': 'getcpurl'
     'body': "return UrlHelper::getCpUrl('$1/'.$2->handle.'/'.$this->id);"
 
-  'Get Criteria':
+  'Craft Get Criteria':
     'prefix': 'getcriteria'
     'body': "return craft()->elements->getCriteria('$1');"
 
-  'Get Developer':
+  'Craft Get Developer':
     'prefix': 'getdev'
     'body': """
     public function getDeveloper()
@@ -121,7 +121,7 @@
     }
     """
 
-  'Get Developer URL':
+  'Craft Get Developer URL':
     'prefix': 'devulr'
     'body': """
     public function getDeveloperUrl()
@@ -130,11 +130,11 @@
     }
     """
 
-  'Get Post':
+  'Craft Get Post Request':
     'prefix': 'getpost'
     'body': "craft()->request->getPost('$1');"
 
-  'Get Name':
+  'Craft Get Plugin Name':
     'prefix': 'getname'
     'body': """
     public function getName()
@@ -143,11 +143,11 @@
     }
     """
 
-  'Get Required Post':
+  'Craft Get Required Post':
     'prefix': 'getrequiredpost'
     'body': "$1 = craft()->request->getRequiredPost('$2');"
 
-  'Get Version':
+  'Craft Get Plugin Version':
     'prefix': 'getversion'
     'body': """
     public function getVersion()
@@ -158,17 +158,17 @@
 
 # I
 
-  'Include CSS':
+  'Craft Include CSS':
     'prefix': 'includecss'
     'body': "craft()->templates->includeCssResource('$1.css');"
 
-  'Include JS':
+  'Craft Include JS':
     'prefix': 'includejs'
     'body': "craft()->templates->includeJsResource('$1.js');"
 
 # M
 
-  'Model':
+  'Craft Model Class':
     'prefix': 'model'
     'body': """
     namespace Craft;
@@ -188,7 +188,7 @@
 
 # P
 
-  'Plugin':
+  'Craft Plugin Class':
     'prefix': 'plugin'
     'body': """
     namespace Craft;
@@ -219,7 +219,7 @@
 
 # R
 
-  'Record':
+  'Craft Record Class':
     'prefix': 'record'
     'body': """
     namespace Craft;
@@ -241,29 +241,29 @@
     }
     """
 
-  'Redirect':
+  'Craft Redirect':
     'prefix': 'redirect'
     'body': "$this->redirect('$1');"
 
-  'Redirect to Posted URL':
+  'Craft Redirect to Posted URL':
     'prefix': 'redirecttopostedurl'
     'body': "$this->redirectToPostedUrl();"
 
-  'Render Template':
+  'Craft Render Template':
     'prefix': 'rendertemplate'
     'body': "$this->renderTemplate('$1');"
 
-  'Require Ajax':
+  'Craft Require Ajax':
     'prefix': 'requireajax'
     'body': "$this->requireAjaxRequest('$1');"
 
-  'Require Post':
+  'Craft Require Post':
     'prefix': 'requirepost'
     'body': "$this->requirePostRequest('$1');"
 
 # S
 
-  'Service':
+  'Craft Service Class':
     'prefix': 'service'
     'body': """
     namespace Craft;
@@ -279,15 +279,15 @@
     }
     """
 
-    'Set Error':
+    'Craft Set Error':
       'prefix': 'seterror'
       'body': "craft()->userSession->setError(Craft::t('$1.'));"
 
-    'Set Notice':
+    'Craft Set Notice':
       'prefix': 'setnotice'
       'body': "craft()->userSession->setNotice(Craft::t('$1.'));"
 
-    'Set Route Variable':
+    'Craft Set Route Variable':
       'prefix': 'setroutevariable'
       'body': """
       craft()->urlManager->setRouteVariables(array(
@@ -297,7 +297,7 @@
 
 # V
 
-    'Variable':
+    'Craft Variable Class':
       'prefix': 'variable'
       'body': """
       namespace Craft;
