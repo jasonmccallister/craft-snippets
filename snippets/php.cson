@@ -1,0 +1,327 @@
+#
+# These are the PHP related snippets.
+#
+'.source.php':
+
+# A
+
+  'Action':
+    'prefix': 'caction'
+    'body': """
+    public function action$1()
+    {
+        $2
+    }
+    """
+
+# B
+
+
+# C
+
+  'Controller':
+    'prefix': 'controller'
+    'body': """
+    namespace Craft;
+
+    class $1Controller extends BaseController
+    {
+        public function action$2()
+        {
+            $3;
+            $this->redirect('$4');
+        }
+    }
+    """
+
+# D
+
+
+# E
+
+  'Element Type':
+    'prefix': 'elementtype'
+    'body': """
+    namespace Craft;
+
+    class $1ElementType extends BaseElementType
+    {
+
+        public function getName()
+        {
+            return Craft::t('$2');
+        }
+
+        public function hasContent()
+        {
+            return $3;
+        }
+
+        public function hasTitles()
+        {
+            return $4;
+        }
+
+        public function getSources($context = null)
+        {
+            $sources = $5;
+
+            return $sources;
+        }
+
+        public function defineTableAttributes($source = null)
+        {
+            return array(
+              '$6' => Craft::t('$7')
+            );
+        }
+
+        public function getTableAttributeHtml(BaseElementModel $element, $attribute)
+        {
+            return $8;
+        }
+
+        public function defineCriteriaAttributes()
+        {
+            return array(
+                '$9' => AttributeType::$10
+            );
+        }
+
+        public function modifyElementsQuery(DbCommand $query, ElementCriteriaModel $criteria)
+        {
+            $11;
+        }
+
+        public function populateElementModel($row)
+        {
+            return $12Model::populateModel($row);
+        }
+
+        public function getEditorHtml(BaseElementModel $element)
+        {
+            // Everything else
+            $html .= parent::getEditorHtml($element);
+
+            return $html;
+        }
+    }
+    """
+
+# F
+
+
+
+# G
+
+  'Get CP Url':
+    'prefix': 'getcpurl'
+    'body': "return UrlHelper::getCpUrl('$1/'.$2->handle.'/'.$this->id);"
+
+  'Get Criteria':
+    'prefix': 'getcriteria'
+    'body': "return craft()->elements->getCriteria('$1');"
+
+  'Get Developer':
+    'prefix': 'getdev'
+    'body': """
+    public function getDeveloper()
+    {
+        return '$1';
+    }
+    """
+
+  'Get Developer URL':
+    'prefix': 'devulr'
+    'body': """
+    public function getDeveloperUrl()
+    {
+        return 'http://$1';
+    }
+    """
+
+  'Get Post':
+    'prefix': 'getpost'
+    'body': "craft()->request->getPost('$1');"
+
+  'Get Name':
+    'prefix': 'getname'
+    'body': """
+    public function getName()
+    {
+        return Craft::t('$1');
+    }
+    """
+
+  'Get Required Post':
+    'prefix': 'getrequiredpost'
+    'body': "$1 = craft()->request->getRequiredPost('$2');"
+
+  'Get Version':
+    'prefix': 'getversion'
+    'body': """
+    public function getVersion()
+    {
+        return '$1';
+    }
+    """
+
+# H
+
+
+# I
+
+  'Include CSS':
+    'prefix': 'includecss'
+    'body': "craft()->templates->includeCssResource('$1.css');"
+
+  'Include JS':
+    'prefix': 'includejs'
+    'body': "craft()->templates->includeJsResource('$1.js');"
+
+# M
+
+  'Model':
+    'prefix': 'model'
+    'body': """
+    namespace Craft;
+
+    class $1Model extends BaseModel
+    {
+
+        protected function defineAttributes()
+        {
+            return array(
+                '$2' => array(AttributeType::$3)
+            );
+        }
+
+    }
+    """
+
+# P
+
+  'Plugin':
+    'prefix': 'plugin'
+    'body': """
+    namespace Craft;
+
+    class $1Plugin extends BasePlugin
+    {
+        public function getName()
+        {
+            return Craft::t('$2');
+        }
+
+        public function getVersion()
+        {
+            return '$3';
+        }
+
+        public function getDeveloper()
+        {
+            return '$4';
+        }
+
+        public function getDeveloperUrl()
+        {
+            return 'http://$5';
+        }
+    }
+    """
+
+# R
+
+  'Record':
+    'prefix': 'record'
+    'body': """
+    namespace Craft;
+
+    class $1Record extends BaseRecord
+    {
+        public function getTableName()
+        {
+            return '$2';
+        }
+
+        public function defineAttributes()
+        {
+            return array(
+                '$3' => array(AttributeType::$4),
+                )
+            );
+        }
+    }
+    """
+
+  'Redirect':
+    'prefix': 'redirect'
+    'body': "$this->redirect('$1');"
+
+  'Redirect to Posted URL':
+    'prefix': 'redirecttopostedurl'
+    'body': "$this->redirectToPostedUrl();"
+
+  'Render Template':
+    'prefix': 'rendertemplate'
+    'body': "$this->renderTemplate('$1');"
+
+  'Require Ajax':
+    'prefix': 'requireajax'
+    'body': "$this->requireAjaxRequest('$1');"
+
+  'Require Post':
+    'prefix': 'requirepost'
+    'body': "$this->requirePostRequest('$1');"
+
+# S
+
+  'Service':
+    'prefix': 'service'
+    'body': """
+    namespace Craft;
+
+    class $1Service extends BaseApplicationComponent
+    {
+        protected $2;
+
+        public function getAll$3()
+        {
+            $4;
+        }
+    }
+    """
+
+    'Set Error':
+      'prefix': 'seterror'
+      'body': "craft()->userSession->setError(Craft::t('$1.'));"
+
+    'Set Notice':
+      'prefix': 'setnotice'
+      'body': "craft()->userSession->setNotice(Craft::t('$1.'));"
+
+    'Set Route Variable':
+      'prefix': 'setroutevariable'
+      'body': """
+      craft()->urlManager->setRouteVariables(array(
+          '$1' => $2
+      ));
+      """
+
+  # V
+
+    'Variable':
+      'prefix': 'variable'
+      'body': """
+      namespace Craft;
+
+      class $1Variable
+      {
+          public function find$2($criteria)
+          {
+              $criteria = new $3($criteria);
+              return craft()->$4->find$5($criteria);
+          }
+
+      }
+      """
