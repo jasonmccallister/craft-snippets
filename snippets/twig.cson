@@ -1,0 +1,67 @@
+#
+# These are the Twig related snippets.
+#
+'.html.twig':
+
+# A
+
+  'Craft Assets':
+    'prefix': 'cassets'
+    'body': """
+    {% for $1 in craft.assets.kind('$2') %}
+        <li><img src="{{ $1.getUrl('$3') }}" alt="{{ $1.title }}"></li>
+    {% endfor %}$4
+    """
+
+# C
+
+  'Craft Categories':
+    'prefix': 'ccategories'
+    'body': """
+    <ul>
+        {% nav $1 in craft.categories.group('$2') %}
+            <li>
+                <a href="{{ $1.url }}">{{ $1.title }}</a>
+                {% ifchildren %}
+                    <ul>
+                        {% children %}
+                    </ul>
+                {% endifchildren %}
+            </li>
+        {% endnav %}
+    </ul>$3
+    """
+
+# E
+
+  'Craft Entries':
+    'prefix': 'centries'
+    'body': """
+    {% for $1 in craft.entries.section('$2').limit($3) %}
+        <div class="$4">
+            <h1><a href="{{ $1.url }}">{{ $1.title }}</a></h1>
+            {{ $1.summary }}
+            <a href="{{ $1.url }}">Continue reading</a>
+        </div>
+    {% endfor %}$5
+    """
+
+# T
+
+  'Craft Tags':
+    'prefix': 'ctags'
+    'body': """
+    {% for $1 in craft.tags.group('$2') %}
+        <li><a href="{{ url('$3/'~$1.id) }}">{{ $1.title }}</a></li>
+    {% endfor %}$4
+    """
+
+# U
+
+  'Craft Users':
+    'prefix': 'cusers'
+    'body': """
+    {% for $1 in craft.users.group('$2') %}
+        <li><a href="{{ url('$3/'~$1.id) }}">{{ $1.name }}</a></li>
+    {% endfor %}$4
+    """
