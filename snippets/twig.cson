@@ -56,6 +56,16 @@
     {% endfor %}$4
     """
 
+# M
+
+  'Macro':
+    'prefix': 'macro'
+    'body': """
+    {% macro $1($2) %}
+        $3
+    {% endmacro %}
+    """
+
 # U
 
   'Craft Users':
