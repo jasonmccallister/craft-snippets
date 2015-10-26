@@ -32,7 +32,19 @@
     </ul>$3
     """
 
+  'Craft Cache Tag':
+    'prefix': 'cache'
+    'body': """
+    {% cache $1 %}$2
+    """
+
 # E
+
+  'Craft End Cache Tag':
+    'prefix': 'endcache'
+    'body': """
+    {% endcache %}$1
+    """
 
   'Craft Entries':
     'prefix': 'centries'
